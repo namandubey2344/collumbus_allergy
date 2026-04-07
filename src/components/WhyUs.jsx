@@ -1,5 +1,4 @@
 import React from 'react'
-import './WhyUs.css'
 
 const reasons = [
     {
@@ -51,27 +50,27 @@ const reasons = [
 
 function WhyUs() {
     return (
-        <section className="why-us-section">
-            <div className="container why-inner">
-                <div className="why-left">
-                    <div className="title-wrapper">
-                        <svg className="accent-wave" width="60" height="12" viewBox="0 0 60 12">
+        <section className="py-[100px] bg-[#f8f9fa]">
+            <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-[50px] lg:gap-[80px] items-start">
+                <div className="static lg:sticky lg:top-[100px] text-center lg:text-left">
+                    <div className="mb-[25px] flex flex-col items-center lg:items-start">
+                        <svg className="w-[60px] h-[12px]" viewBox="0 0 60 12">
                             <path d="M0 6 Q15 0, 30 6 T60 6" fill="none" stroke="#1a5f7a" strokeWidth="2" />
                         </svg>
-                        <h2 className="why-title">Why Columbia Allergy and Asthma clinic?</h2>
+                        <h2 className="text-[2.22rem] text-[#1a5f7a] leading-[1.2] mt-[15px] font-bold">Why Columbia Allergy and Asthma clinic?</h2>
                     </div>
-                    <p className="why-desc">
+                    <p className="text-[1.1rem] text-[#666] leading-[1.6]">
                         Patients choose Columbia Allergy for our clinical and scientific approach combined with our commitment to meet their individual needs.
                     </p>
                 </div>
-                <div className="why-right">
-                    <div className="reasons-list">
+                <div>
+                    <div className="flex flex-col gap-10">
                         {reasons.map(reason => (
-                            <div key={reason.id} className="reason-item">
-                                <div className="reason-icon">{reason.icon}</div>
-                                <div className="reason-text">
-                                    <h3>{reason.title}</h3>
-                                    <p>{reason.description}</p>
+                            <div key={reason.id} className="flex gap-[25px] items-start p-5 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:translate-x-[10px]">
+                                <div className="shrink-0 pt-[5px]">{reason.icon}</div>
+                                <div>
+                                    <h3 className="text-[1.1rem] text-[#444] font-bold mb-2 tracking-[0.5px]">{reason.title}</h3>
+                                    <p className="text-[1rem] text-[#777] leading-[1.5] m-0">{reason.description}</p>
                                 </div>
                             </div>
                         ))}
